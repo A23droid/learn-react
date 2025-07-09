@@ -1,4 +1,4 @@
-Notes on Fibres:
+Notes on virtual dom, fibre, and reconcilation:
 
 1.The createRoot create's its own DOM and then compare it with the web browser's DOM and only update those components which are actually updated.
 2.But the browser removes the whole DOM and then recrates the whole DOM with the updated values this is called reload.
