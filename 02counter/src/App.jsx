@@ -17,7 +17,22 @@ function App() {
 
   const increaseValue = () => {
     if (counter === 20) return;
+    // All of this will result in just +1 as react 
+    // bundles all the changes at once.
+
     setCounter(counter + 1); // setCounter(A) => counter = A
+    // setCounter(counter + 1); 
+    // setCounter(counter + 1); 
+    // setCounter(counter + 1);  
+
+    // But if we wanted to do setCounter again and again
+    // instead of setCounter(counter + 4), we can
+
+    setCounter((prevCounter) => prevCounter + 1); 
+    setCounter((myCounter) => myCounter + 1); 
+    setCounter((aditya) => aditya + 1);     
+    setCounter(prevCounter => prevCounter++); 
+
 
     // upon Calling (which indicates a change in state), 
     // react analyses our DOM and checks where have
